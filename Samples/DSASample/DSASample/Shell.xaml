@@ -1,0 +1,53 @@
+﻿<Window x:Class="DSASample.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.codeplex.com/CompositeWPF"
+    xmlns:inf="clr-namespace:DSASample.Infrastructure.Constants;assembly=DSASample.Infrastructure"
+    Title="Composite WPF application with Disconnected Service Agent Sample" Width="800" Height="600">
+    <DockPanel LastChildFill="True">
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock Name="statusMessage"></TextBlock>
+            <StatusBarItem HorizontalContentAlignment="Right">
+            <ProgressBar Name="progressBar" Width="120" Height="12" IsIndeterminate="True" />
+            </StatusBarItem>
+        </StatusBar>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="10,5,0,0" Width="Auto" Content="Composite WPF application that uses DSA App Block" FontWeight="Normal" Foreground="#FF373737" FontSize="24" FontFamily="Corbel"/>
+        <Separator Margin="0,0,0,0" VerticalAlignment="Bottom" Height="10" BorderBrush="#193441"/>
+
+        <Border Grid.Row="1" CornerRadius="4,4,4,4" BorderBrush="#193441" BorderThickness="2,2,2,2" Margin="0,0,0,0" Padding="5" Background="#FFD0D0D0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" CornerRadius="4,4,4,4" BorderBrush="#193441" Background="#FCFFF5" BorderThickness="2,2,2,2" Margin="0,0,0,0" Padding="0,0,0,0">
+                    <ItemsControl cal:RegionManager.RegionName="{x:Static inf:RegionNames.LeftRegion}" >
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <DockPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Border>
+
+                <Border Grid.Column="1" CornerRadius="4,4,4,4" BorderBrush="#193441" Background="#FCFFF5" BorderThickness="2,2,2,2" Margin="0,0,0,0" Padding="0,0,0,0">
+                    <ItemsControl cal:RegionManager.RegionName="{x:Static inf:RegionNames.RightRegion}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <DockPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+    </DockPanel>
+</Window>

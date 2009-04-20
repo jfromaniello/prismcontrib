@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{2E872CAF-47D8-4856-8AD9-E4EA3A4F0889}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{ECF8277A-DCE8-4E47-90F4-C2B1E8E3FE33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DILight", "Silverlight\PrismAG\DI\DILight\DILight.csproj", "{66B804D3-3758-4B71-A086-B918C6DF301B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Interfaces", "Silverlight\PrismAG\Framework\Prism.Interfaces\Prism.Interfaces.csproj", "{4AC56E32-86D1-4A65-89F0-BB267D06B41E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism", "Silverlight\PrismAG\Framework\Prism\Prism.csproj", "{251EF5EC-D3C8-4758-923D-468FBB3BF059}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Silverlight\\PrismAG\\DI\\DILight\\DILight.csproj
+		SccProjectTopLevelParentUniqueName1 = PrismAG.sln
+		SccProjectName1 = Silverlight/PrismAG/DI/DILight
+		SccLocalPath1 = Silverlight\\PrismAG\\DI\\DILight
+		SccProjectUniqueName2 = Silverlight\\PrismAG\\Framework\\Prism.Interfaces\\Prism.Interfaces.csproj
+		SccProjectTopLevelParentUniqueName2 = PrismAG.sln
+		SccProjectName2 = Silverlight/PrismAG/Framework/Prism.Interfaces
+		SccLocalPath2 = Silverlight\\PrismAG\\Framework\\Prism.Interfaces
+		SccProjectUniqueName3 = Silverlight\\PrismAG\\Framework\\Prism\\Prism.csproj
+		SccProjectTopLevelParentUniqueName3 = PrismAG.sln
+		SccProjectName3 = Silverlight/PrismAG/Framework/Prism
+		SccLocalPath3 = Silverlight\\PrismAG\\Framework\\Prism
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Release|.NET.ActiveCfg = Release|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{66B804D3-3758-4B71-A086-B918C6DF301B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Release|.NET.ActiveCfg = Release|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Release|.NET.ActiveCfg = Release|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AC56E32-86D1-4A65-89F0-BB267D06B41E} = {2E872CAF-47D8-4856-8AD9-E4EA3A4F0889}
+		{251EF5EC-D3C8-4758-923D-468FBB3BF059} = {2E872CAF-47D8-4856-8AD9-E4EA3A4F0889}
+		{66B804D3-3758-4B71-A086-B918C6DF301B} = {ECF8277A-DCE8-4E47-90F4-C2B1E8E3FE33}
+	EndGlobalSection
+EndGlobal

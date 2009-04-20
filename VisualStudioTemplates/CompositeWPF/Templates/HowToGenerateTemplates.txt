@@ -1,0 +1,57 @@
+There are 3 different kind of templates:
+- Solution templates
+- Project templates
+- Item templates
+
+Solution template
+------------------
+
+A solution template looks like this. It may define solution folders and points to project templates.
+
+<VSTemplate Version="2.0.0" ...>
+  <TemplateData>
+    <Name>CompositeWPF Shell application (CompositeWPF Contrib)</Name>
+    <Description>CompositeWPF Shell application</Description>
+    <ProjectType>CSharp</ProjectType>
+     ...
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+	<SolutionFolder Name="Modules">
+ 	<ProjectTemplateLink ProjectName="Module">
+		Module\MyTemplate.vstemplate
+	    </ProjectTemplateLink>
+        </SolutionFolder>
+	<SolutionFolder Name="Shell">
+            <ProjectTemplateLink ProjectName="Shell">
+		Shell\MyTemplate.vstemplate
+	    </ProjectTemplateLink>
+        </SolutionFolder>
+	....
+	<SolutionFolder Name="Tests">
+            <ProjectTemplateLink ProjectName="Module.Tests">
+                 Module.Tests\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
+
+When you finish working on the template you need to generate a zip file to test it. To do so:
+- Select all the content in the folder 
+- Send To -> Compressed (zipped) folder
+- Move the zip file generated to "%UserProfile%\Documents\Visual Studio 2005\Templates\ProjectTemplates\Visual C#\Windows"
+
+
+Project templates
+-----------------
+
+Project templates can be generated using Visual Studio. Using File -> Export Template feature.
+The generated zip can be unzipped and used as part of a solution template with the structure explained above in Solution templates.
+
+We can also ship Project Templates. To do so we have to put the zipped project template in the Vsi folder and create a new <Content> in the .vscontent
+
+Item templates
+-----------------
+They can also be generated using Visual Studio and the same applies to Project Templates
+

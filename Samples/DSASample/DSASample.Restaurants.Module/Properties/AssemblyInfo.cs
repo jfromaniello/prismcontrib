@@ -1,0 +1,19 @@
+using System;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyTitle("RestaurantModule")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("CompositeWPFwithDSA")]
+[assembly: AssemblyCopyright("")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("b4d9fe89-b5f0-420c-af5a-486b4ce7f20c")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: CLSCompliant(true)]
+[assembly: NeutralResourcesLanguage("en")]

@@ -1,0 +1,40 @@
+A Visual Studio Installer (vsi) is a zip file renamed to vsi. The internal structure of the zip should be:
+
+\
+ VSTemplate.vscontent
+ Template1.zip
+ Template2.zip
+
+It may contain more than one template. The VSTemplate.vscontent is the manifest of the vsi and will describe what templates will be installed under what category
+
+<VSContent xmlns="http://schemas.microsoft.com/developer/vscontent/2005">
+  <Content>
+    <FileName>CALShellProject.zip</FileName>
+    <DisplayName>Shell Project (CompositeWPF Contrib)</DisplayName>
+    <Description>A project for creating an application using Composite Application Library</Description>
+    <FileContentType>VSTemplate</FileContentType>
+    <ContentVersion>1.0</ContentVersion>
+    <Attributes>
+      <Attribute name="TemplateType" value="Project"></Attribute>
+      <Attribute name="ProjectType" value="Visual C#"></Attribute>
+      <Attribute name="ProjectSubType" value="Composite App Guidance for WPF"></Attribute>
+    </Attributes>
+  </Content>
+  <Content>
+    <FileName>CALShellProjectWithPresenter.zip</FileName>
+    <DisplayName>Shell Project with Presenter (CompositeWPF Contrib)</DisplayName>
+    <Description>A project for creating an application using Composite Application Library</Description>
+    <FileContentType>VSTemplate</FileContentType>
+    <ContentVersion>1.0</ContentVersion>
+    <Attributes>
+      <Attribute name="TemplateType" value="Project"></Attribute>
+      <Attribute name="ProjectType" value="Visual C#"></Attribute>
+      <Attribute name="ProjectSubType" value="Composite App Guidance for WPF"></Attribute>
+    </Attributes>
+  </Content>
+</VSContent>
+
+- For each template a <Content> element must be added. 
+- The FileName element points to the zipped template.
+- To build the vsi select the templates zip files and the .vscontent and "Send To -> Compressed (zipped) folder". 
+    - Rename the generated zip file to .vsi.

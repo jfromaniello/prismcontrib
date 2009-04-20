@@ -1,0 +1,23 @@
+﻿using System;
+using Microsoft.Practices.Composite.Modularity;
+
+namespace CompositeWPFContrib.Composite.UnityExtensions.Tests.Mocks
+{
+    /// <summary>
+    /// Mockup implementation of a module
+    /// </summary>
+    public class ModuleMock : IModule
+    {
+        #region IModule Members
+
+        /// <summary>
+        /// Initializes this instance.
+        /// </summary>
+        public void Initialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+}

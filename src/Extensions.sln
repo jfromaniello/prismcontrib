@@ -1,0 +1,161 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.Wpf", "Extensions\Composite.Wpf\CompositeWPFContrib.Composite.Wpf\CompositeWPFContrib.Composite.Wpf.csproj", "{E47A8188-0170-4C64-9042-43D7232215D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.Wpf.Tests", "Extensions\Composite.Wpf\CompositeWPFContrib.Composite.Wpf.Tests\CompositeWPFContrib.Composite.Wpf.Tests.csproj", "{9DEEE59F-BFB3-4DAA-A7F8-C616CBF043EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite", "Extensions\Composite\CompositeWPFContrib.Composite\CompositeWPFContrib.Composite.csproj", "{2E669946-7863-4DED-A0EB-46D2A78E6550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.Tests", "Extensions\Composite\CompositeWPFContrib.Composite.Tests\CompositeWPFContrib.Composite.Tests.csproj", "{80F79628-D678-4A25-9798-3ECFBDBC563C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.UnityExtensions", "Extensions\Composite.UnityExtensions\CompositeWPFContrib.Composite.UnityExtensions\CompositeWPFContrib.Composite.UnityExtensions.csproj", "{6D4517DD-9EF8-46E2-B4B7-23CBE7E26948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.UnityExtensions.Tests", "Extensions\Composite.UnityExtensions\CompositeWPFContrib.Composite.UnityExtensions.Tests\CompositeWPFContrib.Composite.UnityExtensions.Tests.csproj", "{2C7B34E2-A787-44C4-8432-839158DE85D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A710FC5C-6D3D-4289-A476-576C423554D6}"
+	ProjectSection(SolutionItems) = preProject
+		Extensions.vsmdi = Extensions.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{F172A795-A143-43AB-A20A-B2607DA87FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.SpringExtensions", "Extensions\Composite.SpringExtensions\CompositeWPFContrib.Composite.SpringExtensions\CompositeWPFContrib.Composite.SpringExtensions.csproj", "{8F8BB7CC-61C7-46CB-AC5B-73B7208B36B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.SpringExtensions.Tests", "Extensions\Composite.SpringExtensions\CompositeWPFContrib.Composite.SpringExtensions.Tests\CompositeWPFContrib.Composite.SpringExtensions.Tests.csproj", "{5C6AE27D-80E9-44D2-AF23-780A07A55B6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.WindsorExtensions", "Extensions\Composite.WindsorExtensions\CompositeWPFContrib.Composite.WindsorExtensions\CompositeWPFContrib.Composite.WindsorExtensions.csproj", "{2A3A9113-BA39-47A8-B7A4-E2133A333DDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.WindsorExtensions.Tests", "Extensions\Composite.WindsorExtensions\CompositeWPFContrib.Composite.WindsorExtensions.Tests\CompositeWPFContrib.Composite.WindsorExtensions.Tests.csproj", "{FE2D8675-04B2-4049-9B5B-F901D3D8767B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrismV1", "PrismV1", "{7AD8DD6B-04AE-4457-BC52-EC72E09212C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrismV2", "PrismV2", "{79DA5916-F0F6-46A0-B5AE-1592D40C8A14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.Presentation", "Extensions\PrismV2\CompositeWPFContrib.Composite.Presentation\CompositeWPFContrib.Composite.Presentation.csproj", "{57168D34-21D2-4525-A2DE-AC3AC75B640D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeWPFContrib.Composite.Presentation.Tests", "Extensions\PrismV2\CompositeWPFContrib.Composite.Presentation.Tests\CompositeWPFContrib.Composite.Presentation.Tests.csproj", "{490DF85B-3B23-4D7C-9780-8CB1F661AD94}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Extensions\\Composite\\CompositeWPFContrib.Composite\\CompositeWPFContrib.Composite.csproj
+		SccProjectTopLevelParentUniqueName1 = Extensions.sln
+		SccProjectName1 = Extensions/Composite/CompositeWPFContrib.Composite
+		SccLocalPath1 = Extensions\\Composite\\CompositeWPFContrib.Composite
+		SccProjectUniqueName2 = Extensions\\Composite\\CompositeWPFContrib.Composite.Tests\\CompositeWPFContrib.Composite.Tests.csproj
+		SccProjectTopLevelParentUniqueName2 = Extensions.sln
+		SccProjectName2 = Extensions/Composite/CompositeWPFContrib.Composite.Tests
+		SccLocalPath2 = Extensions\\Composite\\CompositeWPFContrib.Composite.Tests
+		SccProjectUniqueName3 = Extensions\\Composite.Wpf\\CompositeWPFContrib.Composite.Wpf\\CompositeWPFContrib.Composite.Wpf.csproj
+		SccProjectTopLevelParentUniqueName3 = Extensions.sln
+		SccProjectName3 = Extensions/Composite.Wpf/CompositeWPFContrib.Composite.Wpf
+		SccLocalPath3 = Extensions\\Composite.Wpf\\CompositeWPFContrib.Composite.Wpf
+		SccProjectUniqueName4 = Extensions\\Composite.Wpf\\CompositeWPFContrib.Composite.Wpf.Tests\\CompositeWPFContrib.Composite.Wpf.Tests.csproj
+		SccProjectTopLevelParentUniqueName4 = Extensions.sln
+		SccProjectName4 = Extensions/Composite.Wpf/CompositeWPFContrib.Composite.Wpf.Tests
+		SccLocalPath4 = Extensions\\Composite.Wpf\\CompositeWPFContrib.Composite.Wpf.Tests
+		SccProjectUniqueName5 = Extensions\\Composite.UnityExtensions\\CompositeWPFContrib.Composite.UnityExtensions\\CompositeWPFContrib.Composite.UnityExtensions.csproj
+		SccProjectTopLevelParentUniqueName5 = Extensions.sln
+		SccProjectName5 = Extensions/Composite.UnityExtensions/CompositeWPFContrib.Composite.UnityExtensions
+		SccLocalPath5 = Extensions\\Composite.UnityExtensions\\CompositeWPFContrib.Composite.UnityExtensions
+		SccProjectUniqueName6 = Extensions\\Composite.UnityExtensions\\CompositeWPFContrib.Composite.UnityExtensions.Tests\\CompositeWPFContrib.Composite.UnityExtensions.Tests.csproj
+		SccProjectTopLevelParentUniqueName6 = Extensions.sln
+		SccProjectName6 = Extensions/Composite.UnityExtensions/CompositeWPFContrib.Composite.UnityExtensions.Tests
+		SccLocalPath6 = Extensions\\Composite.UnityExtensions\\CompositeWPFContrib.Composite.UnityExtensions.Tests
+		SccProjectUniqueName7 = Extensions\\Composite.SpringExtensions\\CompositeWPFContrib.Composite.SpringExtensions\\CompositeWPFContrib.Composite.SpringExtensions.csproj
+		SccProjectTopLevelParentUniqueName7 = Extensions.sln
+		SccProjectName7 = Extensions/Composite.SpringExtensions/CompositeWPFContrib.Composite.SpringExtensions
+		SccLocalPath7 = Extensions\\Composite.SpringExtensions\\CompositeWPFContrib.Composite.SpringExtensions
+		SccProjectUniqueName8 = Extensions\\Composite.SpringExtensions\\CompositeWPFContrib.Composite.SpringExtensions.Tests\\CompositeWPFContrib.Composite.SpringExtensions.Tests.csproj
+		SccProjectTopLevelParentUniqueName8 = Extensions.sln
+		SccProjectName8 = Extensions/Composite.SpringExtensions/CompositeWPFContrib.Composite.SpringExtensions.Tests
+		SccLocalPath8 = Extensions\\Composite.SpringExtensions\\CompositeWPFContrib.Composite.SpringExtensions.Tests
+		SccProjectUniqueName9 = Extensions\\PrismV2\\CompositeWPFContrib.Composite.Presentation\\CompositeWPFContrib.Composite.Presentation.csproj
+		SccProjectTopLevelParentUniqueName9 = Extensions.sln
+		SccProjectName9 = Extensions/PrismV2/CompositeWPFContrib.Composite.Presentation
+		SccLocalPath9 = Extensions\\PrismV2\\CompositeWPFContrib.Composite.Presentation
+		SccProjectUniqueName10 = Extensions\\PrismV2\\CompositeWPFContrib.Composite.Presentation.Tests\\CompositeWPFContrib.Composite.Presentation.Tests.csproj
+		SccProjectTopLevelParentUniqueName10 = Extensions.sln
+		SccProjectName10 = Extensions/PrismV2/CompositeWPFContrib.Composite.Presentation.Tests
+		SccLocalPath10 = Extensions\\PrismV2\\CompositeWPFContrib.Composite.Presentation.Tests
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Extensions.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E47A8188-0170-4C64-9042-43D7232215D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47A8188-0170-4C64-9042-43D7232215D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47A8188-0170-4C64-9042-43D7232215D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47A8188-0170-4C64-9042-43D7232215D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEEE59F-BFB3-4DAA-A7F8-C616CBF043EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEEE59F-BFB3-4DAA-A7F8-C616CBF043EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEEE59F-BFB3-4DAA-A7F8-C616CBF043EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEEE59F-BFB3-4DAA-A7F8-C616CBF043EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E669946-7863-4DED-A0EB-46D2A78E6550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E669946-7863-4DED-A0EB-46D2A78E6550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E669946-7863-4DED-A0EB-46D2A78E6550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E669946-7863-4DED-A0EB-46D2A78E6550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F79628-D678-4A25-9798-3ECFBDBC563C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F79628-D678-4A25-9798-3ECFBDBC563C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F79628-D678-4A25-9798-3ECFBDBC563C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F79628-D678-4A25-9798-3ECFBDBC563C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4517DD-9EF8-46E2-B4B7-23CBE7E26948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4517DD-9EF8-46E2-B4B7-23CBE7E26948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4517DD-9EF8-46E2-B4B7-23CBE7E26948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4517DD-9EF8-46E2-B4B7-23CBE7E26948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7B34E2-A787-44C4-8432-839158DE85D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7B34E2-A787-44C4-8432-839158DE85D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7B34E2-A787-44C4-8432-839158DE85D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7B34E2-A787-44C4-8432-839158DE85D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8BB7CC-61C7-46CB-AC5B-73B7208B36B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8BB7CC-61C7-46CB-AC5B-73B7208B36B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8BB7CC-61C7-46CB-AC5B-73B7208B36B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8BB7CC-61C7-46CB-AC5B-73B7208B36B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6AE27D-80E9-44D2-AF23-780A07A55B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6AE27D-80E9-44D2-AF23-780A07A55B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6AE27D-80E9-44D2-AF23-780A07A55B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6AE27D-80E9-44D2-AF23-780A07A55B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3A9113-BA39-47A8-B7A4-E2133A333DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3A9113-BA39-47A8-B7A4-E2133A333DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3A9113-BA39-47A8-B7A4-E2133A333DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3A9113-BA39-47A8-B7A4-E2133A333DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2D8675-04B2-4049-9B5B-F901D3D8767B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2D8675-04B2-4049-9B5B-F901D3D8767B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2D8675-04B2-4049-9B5B-F901D3D8767B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2D8675-04B2-4049-9B5B-F901D3D8767B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57168D34-21D2-4525-A2DE-AC3AC75B640D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57168D34-21D2-4525-A2DE-AC3AC75B640D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57168D34-21D2-4525-A2DE-AC3AC75B640D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57168D34-21D2-4525-A2DE-AC3AC75B640D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490DF85B-3B23-4D7C-9780-8CB1F661AD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490DF85B-3B23-4D7C-9780-8CB1F661AD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490DF85B-3B23-4D7C-9780-8CB1F661AD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490DF85B-3B23-4D7C-9780-8CB1F661AD94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80F79628-D678-4A25-9798-3ECFBDBC563C} = {F172A795-A143-43AB-A20A-B2607DA87FFD}
+		{2C7B34E2-A787-44C4-8432-839158DE85D8} = {F172A795-A143-43AB-A20A-B2607DA87FFD}
+		{9DEEE59F-BFB3-4DAA-A7F8-C616CBF043EA} = {F172A795-A143-43AB-A20A-B2607DA87FFD}
+		{5C6AE27D-80E9-44D2-AF23-780A07A55B6D} = {F172A795-A143-43AB-A20A-B2607DA87FFD}
+		{FE2D8675-04B2-4049-9B5B-F901D3D8767B} = {F172A795-A143-43AB-A20A-B2607DA87FFD}
+		{490DF85B-3B23-4D7C-9780-8CB1F661AD94} = {F172A795-A143-43AB-A20A-B2607DA87FFD}
+		{2E669946-7863-4DED-A0EB-46D2A78E6550} = {7AD8DD6B-04AE-4457-BC52-EC72E09212C1}
+		{8F8BB7CC-61C7-46CB-AC5B-73B7208B36B9} = {7AD8DD6B-04AE-4457-BC52-EC72E09212C1}
+		{6D4517DD-9EF8-46E2-B4B7-23CBE7E26948} = {7AD8DD6B-04AE-4457-BC52-EC72E09212C1}
+		{2A3A9113-BA39-47A8-B7A4-E2133A333DDB} = {7AD8DD6B-04AE-4457-BC52-EC72E09212C1}
+		{E47A8188-0170-4C64-9042-43D7232215D2} = {7AD8DD6B-04AE-4457-BC52-EC72E09212C1}
+		{57168D34-21D2-4525-A2DE-AC3AC75B640D} = {79DA5916-F0F6-46A0-B5AE-1592D40C8A14}
+	EndGlobalSection
+EndGlobal

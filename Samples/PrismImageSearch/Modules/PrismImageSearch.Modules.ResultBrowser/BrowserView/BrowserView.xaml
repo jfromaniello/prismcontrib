@@ -1,0 +1,36 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="PrismImageSearch.Modules.ResultBrowser.BrowserView"
+    xmlns:isc="clr-namespace:PrismImageSearch.Infrastructure.Converters;assembly=PrismImageSearch.Infrastructure"
+    xmlns:ism="clr-namespace:PrismImageSearch.Infrastructure.Model;assembly=PrismImageSearch.Infrastructure"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    d:DesignWidth="640" d:DesignHeight="480">
+
+	<UserControl.Resources>
+        <isc:ShortDateConverter x:Key="ShortDate" />
+        <DataTemplate x:Key="ResultItemTemplate">
+			<Grid Height="80">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="0.386*"/>
+					<RowDefinition Height="0.614*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.199*"/>
+					<ColumnDefinition Width="0.801*"/>
+				</Grid.ColumnDefinitions>
+				<Image MaxWidth="80" MaxHeight="80" Margin="4,4,4,4" Grid.RowSpan="2" Source="{Binding Location}"/>
+				<TextBlock Grid.Column="1" FontFamily="Comic Sans MS" FontSize="18" Text="{Binding Title}" TextWrapping="Wrap"/>
+				<TextBlock Grid.Column="1" Grid.Row="1" FontSize="10" Text="{Binding Description}" TextWrapping="Wrap"/>
+				<TextBlock Grid.Row="1" Text="{Binding DateTaken.Date, Mode=OneWay, Converter={StaticResource ShortDate}}" FontSize="11" VerticalAlignment="Bottom" TextAlignment="Center" HorizontalAlignment="Center"/>
+			</Grid>
+        </DataTemplate>
+		<ism:SearchResult x:Key="SearchResultsSource" d:IsDataSource="True"/>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" >
+		<ListBox x:Name="SearchResults" ItemsSource="{Binding}" ItemTemplate="{StaticResource ResultItemTemplate}" SelectionChanged="SearchResults_SelectionChanged" />
+	</Grid>
+</UserControl>

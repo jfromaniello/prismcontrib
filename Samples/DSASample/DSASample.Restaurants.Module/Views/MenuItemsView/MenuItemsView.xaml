@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="DSASample.Restaurants.Module.Views.MenuItemsView.MenuItemsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:models="clr-namespace:RestaurantModule.MenuService;assembly=RestaurantModule"
+    Width="Auto" Height="Auto">
+    
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap" Visibility="Collapsed" Name="txt_error" Width="Auto" Height="Auto" Text="There has been an error contacting the back-end service." HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock TextWrapping="Wrap" Visibility="Collapsed" Name="txt_restaurant" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Normal" Foreground="#FF373737" FontSize="14" FontFamily="Corbel" />
+        <TextBlock TextWrapping="Wrap" Visibility="Collapsed" Name="txt_offline" Width="Auto" Height="Auto" Text="You are working in offline mode. Please connect and try again." VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Button Visibility="Collapsed" Name="btn_retry" VerticalAlignment="Center" HorizontalAlignment="Center">Click here to Retry</Button>
+        <ListView Visibility="Collapsed" Name="menuItemlistView" Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Menu Item" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Path=Price}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
+    
+</UserControl>

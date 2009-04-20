@@ -1,0 +1,35 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="PrismImageSearch.Modules.ResultDetails.ResultDetailsView"
+    xmlns:ism="clr-namespace:PrismImageSearch.Infrastructure.Model;assembly=PrismImageSearch.Infrastructure"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    d:DesignWidth="640" d:DesignHeight="480"
+    DataContext="{Binding '', Mode=OneWay, Source={StaticResource SearchResultsSource}}">
+
+	<UserControl.Resources>
+        <ism:SearchResult x:Key="SearchResultsSource" d:IsDataSource="True"/>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.831*"/>
+			<RowDefinition Height="0.169*"/>
+		</Grid.RowDefinitions>
+        <Image Source="{Binding Location, Mode=OneWay}" Grid.RowSpan="2" x:Name="LargeImage" />
+        <Grid Grid.Row="1" x:Name="InfoGrid" Margin="10,10,10,10">
+        	<Rectangle Stroke="#FF000000" RadiusX="8" RadiusY="8" x:Name="DetailsBackground">
+				<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#ACC3C3C3" Offset="0.286"/>
+        			<GradientStop Color="#AC7A7A7A" Offset="0"/>
+        			<GradientStop Color="#B73F3F3F" Offset="1"/>
+        		</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+        	<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Title, Mode=OneWay}" FontSize="28" Foreground="#FF000000"/>
+        </Grid>
+    </Grid>
+</UserControl>

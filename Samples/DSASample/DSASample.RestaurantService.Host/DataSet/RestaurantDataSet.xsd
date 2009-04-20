@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RestaurantDataSet" targetNamespace="http://tempuri.org/RestaurantDataSet.xsd" xmlns:mstns="http://tempuri.org/RestaurantDataSet.xsd" xmlns="http://tempuri.org/RestaurantDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RestaurantDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="RestaurantDataSet" msprop:Generator_DataSetName="RestaurantDataSet" msprop:EnableTableAdapterManager="False">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Restaurant" msprop:Generator_UserTableName="Restaurant" msprop:Generator_RowDeletedName="RestaurantRowDeleted" msprop:Generator_RowChangedName="RestaurantRowChanged" msprop:Generator_RowClassName="RestaurantRow" msprop:Generator_RowChangingName="RestaurantRowChanging" msprop:Generator_RowEvArgName="RestaurantRowChangeEvent" msprop:Generator_RowEvHandlerName="RestaurantRowChangeEventHandler" msprop:Generator_TableClassName="RestaurantDataTable" msprop:Generator_TableVarName="tableRestaurant" msprop:Generator_RowDeletingName="RestaurantRowDeleting" msprop:Generator_TablePropName="Restaurant">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Identifier" msdata:ReadOnly="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="Identifier" msprop:Generator_ColumnVarNameInTable="columnIdentifier" msprop:Generator_ColumnPropNameInRow="Identifier" msprop:Generator_ColumnPropNameInTable="IdentifierColumn" type="xs:string" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ImageLocation" msprop:Generator_UserColumnName="ImageLocation" msprop:Generator_ColumnVarNameInTable="columnImageLocation" msprop:Generator_ColumnPropNameInRow="ImageLocation" msprop:Generator_ColumnPropNameInTable="ImageLocationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MenuItem" msprop:Generator_UserTableName="MenuItem" msprop:Generator_RowDeletedName="MenuItemRowDeleted" msprop:Generator_RowChangedName="MenuItemRowChanged" msprop:Generator_RowClassName="MenuItemRow" msprop:Generator_RowChangingName="MenuItemRowChanging" msprop:Generator_RowEvArgName="MenuItemRowChangeEvent" msprop:Generator_RowEvHandlerName="MenuItemRowChangeEventHandler" msprop:Generator_TableClassName="MenuItemDataTable" msprop:Generator_TableVarName="tableMenuItem" msprop:Generator_RowDeletingName="MenuItemRowDeleting" msprop:Generator_TablePropName="MenuItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Identifier" msprop:Generator_UserColumnName="Identifier" msprop:Generator_ColumnVarNameInTable="columnIdentifier" msprop:Generator_ColumnPropNameInRow="Identifier" msprop:Generator_ColumnPropNameInTable="IdentifierColumn" type="xs:string" />
+              <xs:element name="Restaurant" msprop:Generator_UserColumnName="Restaurant" msprop:Generator_ColumnPropNameInRow="Restaurant" msprop:Generator_ColumnVarNameInTable="columnRestaurant" msprop:Generator_ColumnPropNameInTable="RestaurantColumn" type="xs:string" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ImageLocation" msprop:Generator_UserColumnName="ImageLocation" msprop:Generator_ColumnVarNameInTable="columnImageLocation" msprop:Generator_ColumnPropNameInRow="ImageLocation" msprop:Generator_ColumnPropNameInTable="ImageLocationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Number" msprop:Generator_UserColumnName="Number" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInTable="NumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PreparationTime" msprop:Generator_UserColumnName="PreparationTime" msprop:Generator_ColumnVarNameInTable="columnPreparationTime" msprop:Generator_ColumnPropNameInRow="PreparationTime" msprop:Generator_ColumnPropNameInTable="PreparationTimeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Restaurant" />
+      <xs:field xpath="mstns:Identifier" />
+    </xs:unique>
+    <xs:unique name="MenuItem_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MenuItem" />
+      <xs:field xpath="mstns:Identifier" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Restaurant_MenuItem" msdata:parent="Restaurant" msdata:child="MenuItem" msdata:parentkey="Identifier" msdata:childkey="Restaurant" msprop:Generator_UserRelationName="Restaurant_MenuItem" msprop:Generator_RelationVarName="relationRestaurant_MenuItem" msprop:Generator_UserChildTable="MenuItem" msprop:Generator_UserParentTable="Restaurant" msprop:Generator_ParentPropName="RestaurantRow" msprop:Generator_ChildPropName="GetMenuItemRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

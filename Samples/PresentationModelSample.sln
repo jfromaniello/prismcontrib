@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commanding", "PresentationModelPrismSample\Commanding\Commanding.csproj", "{1E2A9E02-ACEC-4BEE-AFF3-E7480723CAA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commanding.Modules.Order", "PresentationModelPrismSample\Commanding.OrderModule\Commanding.Modules.Order.csproj", "{2FBD1FEC-7E2D-4157-9245-5267CB081482}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PresentationModelPrismSample\\Commanding.OrderModule\\Commanding.Modules.Order.csproj
+		SccProjectName1 = PresentationModelPrismSample/Commanding.OrderModule
+		SccLocalPath1 = PresentationModelPrismSample\\Commanding.OrderModule
+		SccProjectUniqueName2 = PresentationModelPrismSample\\Commanding\\Commanding.csproj
+		SccProjectName2 = PresentationModelPrismSample/Commanding
+		SccLocalPath2 = PresentationModelPrismSample\\Commanding
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E2A9E02-ACEC-4BEE-AFF3-E7480723CAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2A9E02-ACEC-4BEE-AFF3-E7480723CAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2A9E02-ACEC-4BEE-AFF3-E7480723CAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2A9E02-ACEC-4BEE-AFF3-E7480723CAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBD1FEC-7E2D-4157-9245-5267CB081482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBD1FEC-7E2D-4157-9245-5267CB081482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBD1FEC-7E2D-4157-9245-5267CB081482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBD1FEC-7E2D-4157-9245-5267CB081482}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

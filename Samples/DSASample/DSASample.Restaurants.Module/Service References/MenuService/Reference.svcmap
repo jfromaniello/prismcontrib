@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5010af5e-1224-4414-862b-8a453b004697" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8731/RestaurantService.Host/MenuService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MenuService.xsd" MetadataType="Schema" ID="d0a8dfc0-5cee-4aea-b125-fd5a2cdf8549" SourceId="1" SourceUrl="http://localhost:8731/RestaurantService.Host/MenuService?xsd=xsd2" />
+    <MetadataFile FileName="MenuService1.xsd" MetadataType="Schema" ID="df7d7fd5-6d6a-40c9-8e54-3d125405c397" SourceId="1" SourceUrl="http://localhost:8731/RestaurantService.Host/MenuService?xsd=xsd0" />
+    <MetadataFile FileName="MenuService2.xsd" MetadataType="Schema" ID="ea8f8344-9641-49fe-bee5-1426a6424ff7" SourceId="1" SourceUrl="http://localhost:8731/RestaurantService.Host/MenuService?xsd=xsd1" />
+    <MetadataFile FileName="MenuService.wsdl" MetadataType="Wsdl" ID="1396fd42-433b-43fb-9702-9be6caa4f320" SourceId="1" SourceUrl="http://localhost:8731/RestaurantService.Host/MenuService?wsdl" />
+    <MetadataFile FileName="MenuService.disco" MetadataType="Disco" ID="4934a0d3-5324-477b-b9bf-7713ace592e3" SourceId="1" SourceUrl="http://localhost:8731/RestaurantService.Host/MenuService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

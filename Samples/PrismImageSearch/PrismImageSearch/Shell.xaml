@@ -1,0 +1,58 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="PrismImageSearch.Shell"
+    xmlns:is="clr-namespace:PrismImageSearch" 
+    xmlns:pr="clr-namespace:Prism;assembly=Prism"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    d:DesignWidth="640" d:DesignHeight="480">
+
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" >
+		<Grid.Background>
+			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+				<GradientStop Color="#FF486688"/>
+				<GradientStop Color="#FFFFFFFF" Offset="1"/>
+			</LinearGradientBrush>
+		</Grid.Background>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition Height="0.9*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.577*"/>
+			<ColumnDefinition Width="0.400*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="36" Text="Image Search" x:Name="Title">
+			<TextBlock.Foreground>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FF41848C"/>
+					<GradientStop Color="#FFFFFFFF" Offset="1"/>
+				</LinearGradientBrush>
+			</TextBlock.Foreground>
+		</TextBlock>
+        <Grid pr:RegionManager.Region="Criteria" Margin="4,0,4,0" Grid.Column="1" />
+		<Grid HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Grid.Row="1" x:Name="ResultsLayout" DataContext="{Binding '', Mode=OneWay, Source={StaticResource SearchResultsSource}}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Rectangle RadiusX="10" RadiusY="10" Stroke="#FF000000" x:Name="ResultsBackground" Grid.ColumnSpan="2">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFD6D5D5"/>
+						<GradientStop Color="#FFB3B3B3" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Grid x:Name="MasterLayout" Grid.Column="0" pr:RegionManager.Region="Master" Margin="15,15,15,15">
+			</Grid>
+			<Grid x:Name="DetailsLayout" Grid.Column="1" pr:RegionManager.Region="Detail" Margin="27.8999996185303,15,15,15">
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>

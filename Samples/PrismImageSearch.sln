@@ -1,0 +1,160 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismImageSearch", "PrismImageSearch\PrismImageSearch\PrismImageSearch.csproj", "{1431D901-48FC-486B-8D06-A6EDAA36395D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shell", "Shell", "{7897F2D0-361F-481B-9A2E-1D3A1986C45A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{60ED60CB-5825-4D66-9137-5C889A67A015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismImageSearch.Infrastructure", "PrismImageSearch\PrismImageSearch.Infrastructure\PrismImageSearch.Infrastructure.csproj", "{6EA41870-A6CE-476E-85EB-7CE96A133CFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{D451D3E2-3AA3-4619-9867-C8EE14CC5CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismImageSearch.Modules.Search", "PrismImageSearch\Modules\PrismImageSearch.Modules.Search\PrismImageSearch.Modules.Search.csproj", "{31D9F539-E2C8-41D2-AF93-EC71963FC242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismImageSearch.Modules.ResultBrowser", "PrismImageSearch\Modules\PrismImageSearch.Modules.ResultBrowser\PrismImageSearch.Modules.ResultBrowser.csproj", "{2DCB516E-7300-42B6-BD72-EBDC4119F923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismImageSearch.Modules.ResultDetails", "PrismImageSearch\Modules\PrismImageSearch.Modules.ResultDetails\PrismImageSearch.Modules.ResultDetails.csproj", "{D32944DB-576E-4033-99EA-FEE78DD81364}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PrismImageSearch_Web", "PrismImageSearch\PrismImageSearch_Web", "{3C16F6BD-234B-4017-A270-9D4D8DD7A712}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/PrismImageSearch_Web"
+		Debug.AspNetCompiler.PhysicalPath = "PrismImageSearch\PrismImageSearch_Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PrismImageSearch_Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PrismImageSearch_Web"
+		Release.AspNetCompiler.PhysicalPath = "PrismImageSearch\PrismImageSearch_Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PrismImageSearch_Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2232"
+		ProjOutputReferences = "{1431D901-48FC-486B-8D06-A6EDAA36395D}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PrismImageSearch\\PrismImageSearch.Infrastructure\\PrismImageSearch.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName1 = PrismImageSearch.sln
+		SccProjectName1 = PrismImageSearch/PrismImageSearch.Infrastructure
+		SccLocalPath1 = PrismImageSearch\\PrismImageSearch.Infrastructure
+		SccProjectUniqueName2 = PrismImageSearch\\Modules\\PrismImageSearch.Modules.Search\\PrismImageSearch.Modules.Search.csproj
+		SccProjectTopLevelParentUniqueName2 = PrismImageSearch.sln
+		SccProjectName2 = PrismImageSearch/Modules/PrismImageSearch.Modules.Search
+		SccLocalPath2 = PrismImageSearch\\Modules\\PrismImageSearch.Modules.Search
+		SccProjectUniqueName3 = PrismImageSearch\\Modules\\PrismImageSearch.Modules.ResultBrowser\\PrismImageSearch.Modules.ResultBrowser.csproj
+		SccProjectTopLevelParentUniqueName3 = PrismImageSearch.sln
+		SccProjectName3 = PrismImageSearch/Modules/PrismImageSearch.Modules.ResultBrowser
+		SccLocalPath3 = PrismImageSearch\\Modules\\PrismImageSearch.Modules.ResultBrowser
+		SccProjectUniqueName4 = PrismImageSearch\\Modules\\PrismImageSearch.Modules.ResultDetails\\PrismImageSearch.Modules.ResultDetails.csproj
+		SccProjectTopLevelParentUniqueName4 = PrismImageSearch.sln
+		SccProjectName4 = PrismImageSearch/Modules/PrismImageSearch.Modules.ResultDetails
+		SccLocalPath4 = PrismImageSearch\\Modules\\PrismImageSearch.Modules.ResultDetails
+		SccProjectUniqueName5 = PrismImageSearch\\PrismImageSearch\\PrismImageSearch.csproj
+		SccProjectTopLevelParentUniqueName5 = PrismImageSearch.sln
+		SccProjectName5 = PrismImageSearch/PrismImageSearch
+		SccLocalPath5 = PrismImageSearch\\PrismImageSearch
+		SccWebProject6 = true
+		SccProjectUniqueName6 = PrismImageSearch\\PrismImageSearch_Web
+		SccProjectTopLevelParentUniqueName6 = PrismImageSearch.sln
+		SccProjectName6 = PrismImageSearch/PrismImageSearch_Web
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = PrismImageSearch\\PrismImageSearch_Web\\
+		SccProjectEnlistmentChoice6 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Release|.NET.ActiveCfg = Release|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1431D901-48FC-486B-8D06-A6EDAA36395D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Release|.NET.ActiveCfg = Release|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Release|.NET.ActiveCfg = Release|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Release|.NET.ActiveCfg = Release|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Release|.NET.ActiveCfg = Release|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D32944DB-576E-4033-99EA-FEE78DD81364}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Debug|.NET.ActiveCfg = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Debug|.NET.Build.0 = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Release|.NET.ActiveCfg = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Release|.NET.Build.0 = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712}.Release|Mixed Platforms.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1431D901-48FC-486B-8D06-A6EDAA36395D} = {7897F2D0-361F-481B-9A2E-1D3A1986C45A}
+		{3C16F6BD-234B-4017-A270-9D4D8DD7A712} = {7897F2D0-361F-481B-9A2E-1D3A1986C45A}
+		{6EA41870-A6CE-476E-85EB-7CE96A133CFF} = {60ED60CB-5825-4D66-9137-5C889A67A015}
+		{31D9F539-E2C8-41D2-AF93-EC71963FC242} = {D451D3E2-3AA3-4619-9867-C8EE14CC5CCF}
+		{2DCB516E-7300-42B6-BD72-EBDC4119F923} = {D451D3E2-3AA3-4619-9867-C8EE14CC5CCF}
+		{D32944DB-576E-4033-99EA-FEE78DD81364} = {D451D3E2-3AA3-4619-9867-C8EE14CC5CCF}
+	EndGlobalSection
+EndGlobal

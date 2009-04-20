@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E23DBBC8-66F9-4FDC-8133-CE596CE9C0DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSASample.Restaurants.Module", "DSASample\DSASample.Restaurants.Module\DSASample.Restaurants.Module.csproj", "{1AD5E95C-5EEA-40F5-A3A7-5387C01CA709}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1E3878A5-5D5B-4229-AD87-E03A809EDF2B} = {1E3878A5-5D5B-4229-AD87-E03A809EDF2B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSASample", "DSASample\DSASample\DSASample.csproj", "{DD538382-5936-4E3B-92C0-0D2C7868F50A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{6DD72E4F-D5A5-4DFB-AC51-43C5869033F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSASample.RestaurantService.Host", "DSASample\DSASample.RestaurantService.Host\DSASample.RestaurantService.Host.csproj", "{1E3878A5-5D5B-4229-AD87-E03A809EDF2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSASample.Infrastructure", "DSASample\DSASample.Infrastructure\DSASample.Infrastructure.csproj", "{BF497605-4C3C-484E-8C85-88F8DA9F97C9}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DSASample\\DSASample.Infrastructure\\DSASample.Infrastructure.csproj
+		SccProjectName1 = DSASample/DSASample.Infrastructure
+		SccLocalPath1 = DSASample\\DSASample.Infrastructure
+		SccProjectUniqueName2 = DSASample\\DSASample.Restaurants.Module\\DSASample.Restaurants.Module.csproj
+		SccProjectTopLevelParentUniqueName2 = DSASample.sln
+		SccProjectName2 = DSASample/DSASample.Restaurants.Module
+		SccLocalPath2 = DSASample\\DSASample.Restaurants.Module
+		SccProjectUniqueName3 = DSASample\\DSASample.RestaurantService.Host\\DSASample.RestaurantService.Host.csproj
+		SccProjectTopLevelParentUniqueName3 = DSASample.sln
+		SccProjectName3 = DSASample/DSASample.RestaurantService.Host
+		SccLocalPath3 = DSASample\\DSASample.RestaurantService.Host
+		SccProjectUniqueName4 = DSASample\\DSASample\\DSASample.csproj
+		SccProjectName4 = DSASample/DSASample
+		SccLocalPath4 = DSASample\\DSASample
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AD5E95C-5EEA-40F5-A3A7-5387C01CA709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD5E95C-5EEA-40F5-A3A7-5387C01CA709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD5E95C-5EEA-40F5-A3A7-5387C01CA709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD5E95C-5EEA-40F5-A3A7-5387C01CA709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD538382-5936-4E3B-92C0-0D2C7868F50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD538382-5936-4E3B-92C0-0D2C7868F50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD538382-5936-4E3B-92C0-0D2C7868F50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD538382-5936-4E3B-92C0-0D2C7868F50A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E3878A5-5D5B-4229-AD87-E03A809EDF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3878A5-5D5B-4229-AD87-E03A809EDF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3878A5-5D5B-4229-AD87-E03A809EDF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3878A5-5D5B-4229-AD87-E03A809EDF2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF497605-4C3C-484E-8C85-88F8DA9F97C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF497605-4C3C-484E-8C85-88F8DA9F97C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF497605-4C3C-484E-8C85-88F8DA9F97C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF497605-4C3C-484E-8C85-88F8DA9F97C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1AD5E95C-5EEA-40F5-A3A7-5387C01CA709} = {E23DBBC8-66F9-4FDC-8133-CE596CE9C0DF}
+		{1E3878A5-5D5B-4229-AD87-E03A809EDF2B} = {6DD72E4F-D5A5-4DFB-AC51-43C5869033F4}
+	EndGlobalSection
+EndGlobal

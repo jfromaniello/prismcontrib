@@ -1,0 +1,21 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="PrismImageSearch.Modules.Search.CriteriaView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    d:DesignWidth="300" d:DesignHeight="50">
+
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" >
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="70*"/>
+			<ColumnDefinition Width="30*"/>
+		</Grid.ColumnDefinitions>
+		<Button x:Name="SearchButton" Margin="4,4,4,4" Content="Search" Grid.Column="1" Click="SearchButton_Click"/>
+		<TextBox VerticalAlignment="Center" FontSize="16" x:Name="SearchCriteria" Margin="4,0,4,0"/>
+	</Grid>
+</UserControl>

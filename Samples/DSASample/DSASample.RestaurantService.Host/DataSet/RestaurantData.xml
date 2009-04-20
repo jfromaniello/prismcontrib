@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" standalone="yes" ?>
+<RestaurantDataSet xmlns="http://tempuri.org/RestaurantDataSet.xsd">
+  <!--Restuarants-->
+  <Restaurant>
+    <Identifier>1</Identifier>
+    <Name>Uncle Moe's Family</Name>
+  </Restaurant>
+  <Restaurant>
+    <Identifier>2</Identifier>
+    <Name>Toronto</Name>
+  </Restaurant>
+  <Restaurant>
+    <Identifier>3</Identifier>
+    <Name>My Favorite Place</Name>
+  </Restaurant>
+  <Restaurant>
+    <Identifier>4</Identifier>
+    <Name>Tony's Restaurant</Name>
+  </Restaurant>
+  <Restaurant>
+    <Identifier>5</Identifier>
+    <Name>Peter Bar-B-Q</Name>
+  </Restaurant>
+  <!--MenuItems-->
+  <MenuItem>
+    <Identifier>1</Identifier>
+    <Restaurant>1</Restaurant>
+    <Name>Meat with potatoes</Name>
+    <Price>25.50</Price>
+    <PreparationTime>15</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>2</Identifier>
+    <Restaurant>2</Restaurant>
+    <Name>Meat with rice</Name>
+    <Price>15.25</Price>
+    <PreparationTime>20</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>3</Identifier>
+    <Restaurant>1</Restaurant>
+    <Name>Cookies</Name>
+    <Price>25.65</Price>
+    <PreparationTime>10</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>4</Identifier>
+    <Restaurant>2</Restaurant>
+    <Name>Prime filet of beef</Name>
+    <Price>39.99</Price>
+    <PreparationTime>15</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>5</Identifier>
+    <Restaurant>4</Restaurant>
+    <Name>Chicken Sandwich</Name>
+    <Price>7.75</Price>
+    <PreparationTime>5</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>6</Identifier>
+    <Restaurant>4</Restaurant>
+    <Name>Cheese Burger</Name>
+    <Price>7.99</Price>
+    <PreparationTime>4</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>7</Identifier>
+    <Restaurant>4</Restaurant>
+    <Name>Cheese Pizza</Name>
+    <Price>12.50</Price>
+    <PreparationTime>10</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>8</Identifier>
+    <Restaurant>5</Restaurant>
+    <Name>Slab of Ribs</Name>
+    <Price>14.99</Price>
+    <PreparationTime>12</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>9</Identifier>
+    <Restaurant>5</Restaurant>
+    <Name>Mashed Potatoes and Gravy</Name>
+    <Price>26.99</Price>
+    <PreparationTime>12</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>10</Identifier>
+    <Restaurant>5</Restaurant>
+    <Name>Brisket with Sauce and Serving Pan</Name>
+    <Price>42.95</Price>
+    <PreparationTime>12</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>11</Identifier>
+    <Restaurant>3</Restaurant>
+    <Name>French Fries</Name>
+    <Price>3.90</Price>
+    <PreparationTime>12</PreparationTime>
+  </MenuItem>
+  <MenuItem>
+    <Identifier>12</Identifier>
+    <Restaurant>3</Restaurant>
+    <Name>Lemonfish with confit tomato</Name>
+    <Price>26.90</Price>
+    <PreparationTime>12</PreparationTime>
+  </MenuItem>
+</RestaurantDataSet>
