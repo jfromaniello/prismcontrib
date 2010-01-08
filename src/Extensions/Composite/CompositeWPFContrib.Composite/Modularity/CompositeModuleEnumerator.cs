@@ -5,32 +5,32 @@ using Microsoft.Practices.Composite.Modularity;
 namespace CompositeWPFContrib.Composite.Modularity
 {
     /// <summary>
-    /// <see cref="IModuleEnumerator"/> implementation that composites 
-    /// several other <see cref="IModuleEnumerator"/> instances
-    /// and makes them available as one <see cref="IModuleEnumerator"/> instance
+    /// <see cref="IModuleCatalog"/> implementation that composites 
+    /// several other <see cref="IModuleCatalog"/> instances
+    /// and makes them available as one <see cref="IModuleCatalog"/> instance
     /// </summary>
-    public class CompositeModuleEnumerator : IModuleEnumerator
+    public class CompositeModuleEnumerator : IModuleCatalog
     {
-        private Collection<IModuleEnumerator> _childEnumerators;
+        private Collection<IModuleCatalog> _childEnumerators;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CompositeModuleEnumerator"/> class.
         /// </summary>
         public CompositeModuleEnumerator()
         {
-            _childEnumerators = new Collection<IModuleEnumerator>();
+            _childEnumerators = new Collection<IModuleCatalog>();
         }
 
         /// <summary>
         /// Gets the child enumerators
         /// </summary>
-        public Collection<IModuleEnumerator> ChildEnumerators
+        public Collection<IModuleCatalog> ChildEnumerators
         {
             get { return _childEnumerators; }
 
         }
 
-        #region IModuleEnumerator Members
+        #region IModuleCatalog Members
 
         /// <summary>
         /// Gets a single module by the specified name
@@ -39,7 +39,7 @@ namespace CompositeWPFContrib.Composite.Modularity
         /// <returns></returns>
         public ModuleInfo GetModule(string moduleName)
         {
-            foreach (IModuleEnumerator childEnumerator in _childEnumerators)
+            foreach (IModuleCatalog childEnumerator in _childEnumerators)
             {
                 ModuleInfo module = childEnumerator.GetModule(moduleName);
 
@@ -58,7 +58,7 @@ namespace CompositeWPFContrib.Composite.Modularity
         {
             List<ModuleInfo> modules = new List<ModuleInfo>();
 
-            foreach (IModuleEnumerator childEnumerator in _childEnumerators)
+            foreach (IModuleCatalog childEnumerator in _childEnumerators)
             {
                 modules.AddRange(childEnumerator.GetModules());
             }
@@ -74,7 +74,7 @@ namespace CompositeWPFContrib.Composite.Modularity
         {
             List<ModuleInfo> modules = new List<ModuleInfo>();
 
-            foreach (IModuleEnumerator childEnumerator in _childEnumerators)
+            foreach (IModuleCatalog childEnumerator in _childEnumerators)
             {
                 modules.AddRange(childEnumerator.GetStartupLoadedModules());
             }

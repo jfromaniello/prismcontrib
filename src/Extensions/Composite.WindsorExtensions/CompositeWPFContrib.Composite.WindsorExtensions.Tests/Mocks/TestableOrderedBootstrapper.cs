@@ -3,8 +3,8 @@ using System.Windows;
 using Castle.Windsor;
 using Microsoft.Practices.Composite.Logging;
 using Microsoft.Practices.Composite.Modularity;
+using Microsoft.Practices.Composite.Presentation.Regions;
 using Microsoft.Practices.Composite.Regions;
-using Microsoft.Practices.Composite.Wpf.Regions;
 
 namespace CompositeWPFContrib.Composite.WindsorExtensions.Tests.Mocks
 {
@@ -29,10 +29,10 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions.Tests.Mocks
             }
         }
 
-        protected override IModuleEnumerator GetModuleEnumerator()
+        protected override IModuleCatalog GetModuleCatalog()
         {
-            OrderedMethodCallList.Add("GetModuleEnumerator");
-            return new MockModuleEnumerator();
+            OrderedMethodCallList.Add("GetModuleCatalog");
+            return new MockModuleCatalog();
         }
 
         protected override void ConfigureContainer()

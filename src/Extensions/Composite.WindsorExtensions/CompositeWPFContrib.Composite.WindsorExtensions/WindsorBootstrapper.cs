@@ -5,14 +5,17 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using Castle.Core;
 using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.Resolvers;
 using Castle.Windsor;
 using CompositeWPFContrib.Composite.WindsorExtensions.Properties;
 using Microsoft.Practices.Composite;
 using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Logging;
 using Microsoft.Practices.Composite.Modularity;
+using Microsoft.Practices.Composite.Presentation.Regions;
+using Microsoft.Practices.Composite.Presentation.Regions.Behaviors;
 using Microsoft.Practices.Composite.Regions;
-using Microsoft.Practices.Composite.Wpf.Regions;
+using Microsoft.Practices.ServiceLocation;
 
 namespace CompositeWPFContrib.Composite.WindsorExtensions
 {
@@ -88,8 +91,13 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions
             ConfigureContainer();
 
             logger.Log("Configuring region adapters", Category.Debug, Priority.Low);
-
-            ConfigureRegionAdapterMappings();
+			if (_useDefaultConfiguration)
+			{
+				ConfigureDefaultRegionBehaviors();
+				ConfigureRegionAdapterMappings();
+				RegisterFrameworkExceptionTypes();
+				
+			}
 
             logger.Log("Creating shell", Category.Debug, Priority.Low);
             DependencyObject shell = CreateShell();
@@ -118,20 +126,27 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions
             Container.Kernel.AddComponentInstance(typeof(ILoggerFacade).FullName, typeof(ILoggerFacade), LoggerFacade);
             Container.Kernel.AddComponentInstance(typeof(IWindsorContainer).FullName, typeof(IWindsorContainer), Container);
 
-            IModuleEnumerator moduleEnumerator = GetModuleEnumerator();
-            if (moduleEnumerator != null)
-            {
-                Container.Kernel.AddComponentInstance(typeof(IModuleEnumerator).FullName, typeof(IModuleEnumerator), moduleEnumerator);
-            }
+            IModuleCatalog catalog = GetModuleCatalog();
+			if (catalog != null)
+			{
+				Container.Kernel.AddComponentInstance(typeof(IModuleCatalog).FullName, typeof(IModuleCatalog), catalog);
+			}
 
             if (_useDefaultConfiguration)
             {
-                RegisterTypeIfMissing<IContainerFacade, WindsorContainerAdapter>(true);
-                RegisterTypeIfMissing<IEventAggregator, EventAggregator>(true);
-                RegisterTypeIfMissing<RegionAdapterMappings, RegionAdapterMappings>(true);
-                RegisterTypeIfMissing<IRegionManager, RegionManager>(true);
-                RegisterTypeIfMissing<IModuleLoader, ModuleLoader>(true);
-            }
+				//TODO: remove this comment when castle release core and windsor.
+				//Container.Kernel.AddComponent<LazyLoader>(typeof(ILazyComponentLoader));
+            	RegisterTypeIfMissing<IServiceLocator, WindsorServiceLocatorAdapter>(true);
+            	RegisterTypeIfMissing<IModuleInitializer, ModuleInitializer>(true);
+				RegisterTypeIfMissing<IModuleManager, ModuleManager>(true);
+				RegisterTypeIfMissing<RegionAdapterMappings, RegionAdapterMappings>(true);
+				RegisterTypeIfMissing<IRegionManager, RegionManager>(true);
+				RegisterTypeIfMissing<IEventAggregator, EventAggregator>(true);
+				RegisterTypeIfMissing<IRegionViewRegistry, RegionViewRegistry>(true);
+				RegisterTypeIfMissing<IRegionBehaviorFactory, RegionBehaviorFactory>(true);
+
+				ServiceLocator.SetLocatorProvider(() => Container.Resolve<IServiceLocator>());
+			}
         }
 
         /// <summary>
@@ -142,40 +157,81 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions
         /// <returns>The <see cref="RegionAdapterMappings"/> instance containing all the mappings.</returns>
         protected virtual RegionAdapterMappings ConfigureRegionAdapterMappings()
         {
-            RegionAdapterMappings regionAdapterMappings = null;
+			var regionAdapterMappings = Container.TryResolve<RegionAdapterMappings>();
+			if (regionAdapterMappings != null)
+			{
+//#if SILVERLIGHT
+//                regionAdapterMappings.RegisterMapping(typeof(TabControl), this.Container.Resolve<TabControlRegionAdapter>());
+//#endif
+				RegisterTypeIfMissing<SelectorRegionAdapter, SelectorRegionAdapter>(false);
+				RegisterTypeIfMissing<ItemsControlRegionAdapter, ItemsControlRegionAdapter>(false);
+				RegisterTypeIfMissing<ContentControlRegionAdapter, ContentControlRegionAdapter>(false);
+				regionAdapterMappings.RegisterMapping(typeof(Selector), Container.Resolve<SelectorRegionAdapter>());
+				regionAdapterMappings.RegisterMapping(typeof(ItemsControl), Container.Resolve<ItemsControlRegionAdapter>());
+				regionAdapterMappings.RegisterMapping(typeof(ContentControl), Container.Resolve<ContentControlRegionAdapter>());
+			}
 
-            if (Container.IsTypeRegistered<RegionAdapterMappings>())
-            {
-                regionAdapterMappings = Container.TryResolve<RegionAdapterMappings>();
-                regionAdapterMappings.RegisterMapping(typeof(Selector), new SelectorRegionAdapter());
-                regionAdapterMappings.RegisterMapping(typeof(ItemsControl), new ItemsControlRegionAdapter());
-                regionAdapterMappings.RegisterMapping(typeof(ContentControl), new ContentControlRegionAdapter());
-            }
-
-            return regionAdapterMappings;
+			return regionAdapterMappings;
         }
 
-        /// <summary>
-        /// Initializes the modules. May be overwritten in a derived class to use custom 
-        /// module loading and avoid using an <seealso cref="IModuleLoader"/> and 
-        /// <seealso cref="IModuleEnumerator"/>.
-        /// </summary>
+		/// <summary>
+		/// Configures the <see cref="IRegionBehaviorFactory"/>. This will be the list of default
+		/// behaviors that will be added to a region. 
+		/// </summary>
+		protected virtual IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
+		{
+			var defaultRegionBehaviorTypesDictionary = Container.TryResolve<IRegionBehaviorFactory>();
+
+			if (defaultRegionBehaviorTypesDictionary != null)
+			{
+				defaultRegionBehaviorTypesDictionary.AddIfMissing(AutoPopulateRegionBehavior.BehaviorKey,
+					typeof(AutoPopulateRegionBehavior));
+
+				defaultRegionBehaviorTypesDictionary.AddIfMissing(BindRegionContextToDependencyObjectBehavior.BehaviorKey,
+					typeof(BindRegionContextToDependencyObjectBehavior));
+
+				defaultRegionBehaviorTypesDictionary.AddIfMissing(RegionActiveAwareBehavior.BehaviorKey,
+					typeof(RegionActiveAwareBehavior));
+
+				defaultRegionBehaviorTypesDictionary.AddIfMissing(SyncRegionContextWithHostBehavior.BehaviorKey,
+					typeof(SyncRegionContextWithHostBehavior));
+
+				defaultRegionBehaviorTypesDictionary.AddIfMissing(RegionManagerRegistrationBehavior.BehaviorKey,
+					typeof(RegionManagerRegistrationBehavior));
+
+			}
+			return defaultRegionBehaviorTypesDictionary;
+
+		}
+
+		/// <summary>
+		/// Registers in the <see cref="IWindsorContainer"/> the <see cref="Type"/> of the Exceptions
+		/// that are not considered root exceptions by the <see cref="ExceptionExtensions"/>.
+		/// </summary>
+		protected virtual void RegisterFrameworkExceptionTypes()
+		{
+			ExceptionExtensions.RegisterFrameworkExceptionType(
+				typeof(ActivationException));
+
+			ExceptionExtensions.RegisterFrameworkExceptionType(
+				typeof(Castle.MicroKernel.ComponentNotFoundException));
+
+			ExceptionExtensions.RegisterFrameworkExceptionType(
+				typeof(Castle.MicroKernel.ComponentActivator.ComponentActivatorException));
+		}
+
+		/// <summary>
+		/// Initializes the modules. May be overwritten in a derived class to use a custom Modules Catalog
+		/// </summary>
         protected virtual void InitializeModules()
         {
-            var moduleEnumerator = Container.TryResolve<IModuleEnumerator>();
-            if (moduleEnumerator == null)
-            {
-                throw new InvalidOperationException(Resources.NullModuleEnumeratorException);
-            }
+			var manager = Container.TryResolve<IModuleManager>();
+			if(manager == null)
+			{
+				throw new InvalidOperationException(Resources.NullModuleCatalogException);
+			}
 
-            var moduleLoader = Container.TryResolve<IModuleLoader>();
-            if (moduleLoader == null)
-            {
-                throw new InvalidOperationException(Resources.NullModuleLoaderException);
-            }
-
-            ModuleInfo[] moduleInfo = moduleEnumerator.GetStartupLoadedModules();
-            moduleLoader.Initialize(moduleInfo);
+			manager.Run();
         }
 
         /// <summary>
@@ -193,9 +249,9 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions
         /// <remarks>
         /// When using the default initialization behavior, this method must be overwritten by a derived class.
         /// </remarks>
-        /// <returns>An instance of <see cref="IModuleEnumerator"/> that will be used to initialize the modules.</returns>
+        /// <returns>An instance of <see cref="IModuleCatalog"/> that will be used to initialize the modules.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
-        protected virtual IModuleEnumerator GetModuleEnumerator()
+        protected virtual IModuleCatalog GetModuleCatalog()
         {
             return null;
         }

@@ -99,7 +99,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             var bootstrapper = new DefaultBootstrapper();
             bootstrapper.ModuleEnumerator = null;
 
-            AssertExceptionThrownOnRun(bootstrapper, typeof(InvalidOperationException), "IModuleEnumerator");
+            AssertExceptionThrownOnRun(bootstrapper, typeof(InvalidOperationException), "IModuleCatalog");
         }
 
         [TestMethod]
@@ -108,7 +108,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             var bootstrapper = new DefaultBootstrapper();
             bootstrapper.OverrideGetModuleEnumerator = false;
 
-            AssertExceptionThrownOnRun(bootstrapper, typeof(InvalidOperationException), "IModuleEnumerator");
+            AssertExceptionThrownOnRun(bootstrapper, typeof(InvalidOperationException), "IModuleCatalog");
         }
 
         [TestMethod]
@@ -127,7 +127,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
         {
             var bootstrapper = new MockedBootstrapper();
 
-            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleEnumerator), bootstrapper.ModuleEnumerator);
+            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleCatalog), bootstrapper.ModuleEnumerator);
             bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleLoader), null);
 
             AssertExceptionThrownOnRun(bootstrapper, typeof(InvalidOperationException), "IModuleLoader");
@@ -138,7 +138,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
         {
             var bootstrapper = new MockedBootstrapper();
 
-            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleEnumerator), bootstrapper.ModuleEnumerator);
+            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleCatalog), bootstrapper.ModuleEnumerator);
             bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleLoader), new MockModuleLoader());
 
             bootstrapper.Run();
@@ -158,8 +158,8 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             Assert.IsTrue(bootstrapper.MockUnityContainer.Types.ContainsKey(typeof(IEventAggregator)));
             Assert.AreEqual(typeof(EventAggregator), bootstrapper.MockUnityContainer.Types[typeof(IEventAggregator)]);
 
-            Assert.IsTrue(bootstrapper.MockUnityContainer.Instances.ContainsKey(typeof(IModuleEnumerator)));
-            Assert.AreSame(bootstrapper.ModuleEnumerator, bootstrapper.MockUnityContainer.Instances[typeof(IModuleEnumerator)]);
+            Assert.IsTrue(bootstrapper.MockUnityContainer.Instances.ContainsKey(typeof(IModuleCatalog)));
+            Assert.AreSame(bootstrapper.ModuleEnumerator, bootstrapper.MockUnityContainer.Instances[typeof(IModuleCatalog)]);
         }
 
         [TestMethod]
@@ -167,7 +167,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
         {
             var bootstrapper = new MockedBootstrapper();
 
-            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleEnumerator), bootstrapper.ModuleEnumerator);
+            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleCatalog), bootstrapper.ModuleEnumerator);
             bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleLoader), new MockModuleLoader());
 
             bootstrapper.Run();
@@ -181,7 +181,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             var bootstrapper = new MockedBootstrapper();
 
             var moduleLoader = new MockModuleLoader();
-            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleEnumerator), new MockModuleEnumerator());
+            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleCatalog), new MockModuleEnumerator());
             bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleLoader), moduleLoader);
 
             bootstrapper.Run();
@@ -197,7 +197,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
 
             bootstrapper.ModuleEnumerator.StartupLoadedModules = new[] { new ModuleInfo("asm", "type", "name") };
 
-            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleEnumerator), bootstrapper.ModuleEnumerator);
+            bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleCatalog), bootstrapper.ModuleEnumerator);
             bootstrapper.MockUnityContainer.ResolveBag.Add(typeof(IModuleLoader), moduleLoader);
 
 
@@ -305,7 +305,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
         public bool InitializeModulesCalled;
         public bool ReturnNullDefaultLogger;
         public bool OverrideGetModuleEnumerator = true;
-        public IModuleEnumerator ModuleEnumerator = new MockModuleEnumerator();
+        public IModuleCatalog ModuleEnumerator = new MockModuleEnumerator();
         public ILoggerFacade DefaultLogger;
         public bool ConfigureContainerCalled;
 
@@ -320,7 +320,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             base.ConfigureContainer();
         }
 
-        protected override IModuleEnumerator GetModuleEnumerator()
+        protected override IModuleCatalog GetModuleEnumerator()
         {
             GetEnumeratorCalled = true;
             if (OverrideGetModuleEnumerator)
@@ -369,7 +369,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             return this.MockUnityContainer;
         }
 
-        protected override IModuleEnumerator GetModuleEnumerator()
+        protected override IModuleCatalog GetModuleEnumerator()
         {
             return ModuleEnumerator;
         }
@@ -401,7 +401,7 @@ namespace CompositeWPFContrib.Composite.UnityExtensions.Tests
             }
         }
 
-        protected override IModuleEnumerator GetModuleEnumerator()
+        protected override IModuleCatalog GetModuleEnumerator()
         {
             OrderedMethodCallList.Add("GetModuleEnumerator");
             return new MockModuleEnumerator();

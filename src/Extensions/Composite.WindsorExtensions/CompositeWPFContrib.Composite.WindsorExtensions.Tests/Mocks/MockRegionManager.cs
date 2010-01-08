@@ -6,12 +6,7 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions.Tests.Mocks
 {
     public class MockRegionManager : IRegionManager
     {
-        public IDictionary<string, IRegion> Regions
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public void AttachNewRegion(object regionTarget, string regionName)
+		public void AttachNewRegion(object regionTarget, string regionName)
         {
             throw new NotImplementedException();
         }
@@ -20,5 +15,10 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions.Tests.Mocks
         {
             throw new NotImplementedException();
         }
+
+    	public IRegionCollection Regions
+    	{
+    		get { throw new NotImplementedException(); }
+    	}
     }
 }

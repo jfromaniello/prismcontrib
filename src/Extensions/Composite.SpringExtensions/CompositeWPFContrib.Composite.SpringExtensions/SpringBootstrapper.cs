@@ -88,12 +88,12 @@ namespace CompositeWPFContrib.Composite.SpringExtensions
         /// </summary>
         protected virtual void ConfigureContainer()
         {
-            IModuleEnumerator enumerator = GetModuleEnumerator();
+            IModuleCatalog enumerator = GetModuleEnumerator();
 
             if (enumerator != null)
             {
                 // Register the module enumerator
-                RegisterSingletonInstance("IModuleEnumerator", enumerator);
+                RegisterSingletonInstance("IModuleCatalog", enumerator);
             }
 
             // Register the container itself as an alias
@@ -131,11 +131,11 @@ namespace CompositeWPFContrib.Composite.SpringExtensions
         /// <summary>
         /// Initializes the modules. May be overwritten in a derived class to use custom 
         /// module loading and avoid using an <seealso cref="IModuleLoader"/> and 
-        /// <seealso cref="IModuleEnumerator"/>.
+        /// <seealso cref="IModuleCatalog"/>.
         /// </summary>
         protected virtual void InitializeModules()
         {
-            IModuleEnumerator moduleEnumerator = (IModuleEnumerator)_container.GetObject("IModuleEnumerator");
+            IModuleCatalog moduleEnumerator = (IModuleCatalog)_container.GetObject("IModuleCatalog");
 
             if (moduleEnumerator == null)
             {
@@ -158,7 +158,7 @@ namespace CompositeWPFContrib.Composite.SpringExtensions
         /// Gets the module enumerator for the application
         /// </summary>
         /// <returns></returns>
-        protected virtual IModuleEnumerator GetModuleEnumerator()
+        protected virtual IModuleCatalog GetModuleEnumerator()
         {
             return null;
         }

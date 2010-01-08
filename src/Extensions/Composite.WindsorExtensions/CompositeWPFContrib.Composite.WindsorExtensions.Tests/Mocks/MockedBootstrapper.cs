@@ -8,7 +8,7 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions.Tests.Mocks
     public class MockedBootstrapper : WindsorBootstrapper
     {
         public MockWindsorContainer MockContainer = new MockWindsorContainer();
-        public MockModuleEnumerator ModuleEnumerator = new MockModuleEnumerator();
+        public MockModuleCatalog ModuleCatalog = new MockModuleCatalog();
         public MockLoggerAdapter Logger = new MockLoggerAdapter();
 
         protected override IWindsorContainer CreateContainer()
@@ -16,9 +16,9 @@ namespace CompositeWPFContrib.Composite.WindsorExtensions.Tests.Mocks
             return this.MockContainer;
         }
 
-        protected override IModuleEnumerator GetModuleEnumerator()
+        protected override IModuleCatalog GetModuleCatalog()
         {
-            return ModuleEnumerator;
+            return ModuleCatalog;
         }
 
         protected override ILoggerFacade LoggerFacade

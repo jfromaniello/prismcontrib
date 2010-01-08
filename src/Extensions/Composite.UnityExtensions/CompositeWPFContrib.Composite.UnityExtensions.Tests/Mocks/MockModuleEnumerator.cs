@@ -6,7 +6,7 @@ using Microsoft.Practices.Composite.Modularity;
 
 namespace CompositeWPFContrib.Composite.UnityExtensions.Tests.Mocks
 {
-    class MockModuleEnumerator : IModuleEnumerator
+    class MockModuleEnumerator : IModuleCatalog
     {
         public bool GetStartupLoadedModulesCalled;
         public ModuleInfo[] StartupLoadedModules = new ModuleInfo[0];

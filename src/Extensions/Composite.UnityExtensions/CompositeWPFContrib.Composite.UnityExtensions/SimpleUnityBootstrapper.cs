@@ -78,10 +78,10 @@ namespace CompositeWPFContrib.Composite.UnityExtensions
             Container.RegisterInstance<IUnityContainer>(Container);
             Container.AddNewExtension<UnityBootstrapperExtension>();
 
-            IModuleEnumerator moduleEnumerator = GetModuleEnumerator();
+            IModuleCatalog moduleEnumerator = GetModuleEnumerator();
             if (moduleEnumerator != null)
             {
-                Container.RegisterInstance<IModuleEnumerator>(moduleEnumerator);
+                Container.RegisterInstance<IModuleCatalog>(moduleEnumerator);
             }
             if (_useDefaultConfiguration)
             {
@@ -94,11 +94,11 @@ namespace CompositeWPFContrib.Composite.UnityExtensions
         /// <summary>
         /// Initializes the modules. May be overwritten in a derived class to use custom 
         /// module loading and avoid using an <seealso cref="IModuleLoader"/> and 
-        /// <seealso cref="IModuleEnumerator"/>.
+        /// <seealso cref="IModuleCatalog"/>.
         /// </summary>
         protected virtual void InitializeModules()
         {
-            IModuleEnumerator moduleEnumerator = Container.TryResolve<IModuleEnumerator>();
+            IModuleCatalog moduleEnumerator = Container.TryResolve<IModuleCatalog>();
             if (moduleEnumerator == null)
             {
                 throw new InvalidOperationException(Resources.NullModuleEnumeratorException);
@@ -129,9 +129,9 @@ namespace CompositeWPFContrib.Composite.UnityExtensions
         /// <remarks>
         /// When using the default initialization behavior, this method must be overwritten by a derived class.
         /// </remarks>
-        /// <returns>An instance of <see cref="IModuleEnumerator"/> that will be used to initialize the modules.</returns>
+        /// <returns>An instance of <see cref="IModuleCatalog"/> that will be used to initialize the modules.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
-        protected virtual IModuleEnumerator GetModuleEnumerator()
+        protected virtual IModuleCatalog GetModuleEnumerator()
         {
             return null;
         }

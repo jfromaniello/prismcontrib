@@ -59,7 +59,7 @@ namespace CompositeWPFContrib.Composite.SpringExtensions.Tests
             /// Retrieves an empty static module enumerator
             /// </summary>
             /// <returns></returns>
-            protected override IModuleEnumerator GetModuleEnumerator()
+            protected override IModuleCatalog GetModuleEnumerator()
             {
                 IsGetModuleEnumeratorCalled = true;
 

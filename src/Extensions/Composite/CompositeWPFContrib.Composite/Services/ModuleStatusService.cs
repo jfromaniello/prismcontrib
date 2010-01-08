@@ -49,7 +49,7 @@ namespace CompositeWPFContrib.Composite.Services
         public ReadOnlyCollection<ModuleStatusInfo> GetModules()
         {
             List<ModuleStatusInfo> modules = new List<ModuleStatusInfo>();
-            IModuleEnumerator moduleEnumerator = _container.Resolve<IModuleEnumerator>();
+            IModuleCatalog moduleEnumerator = _container.Resolve<IModuleCatalog>();
 
             foreach (ModuleInfo module in moduleEnumerator.GetModules())
             {

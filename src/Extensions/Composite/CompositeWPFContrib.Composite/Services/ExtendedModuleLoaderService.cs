@@ -76,7 +76,7 @@ namespace CompositeWPFContrib.Composite.Services
             if(String.IsNullOrEmpty(moduleName))
                 throw new ArgumentNullException("moduleName");
             
-            IModuleEnumerator moduleEnumerator = _container.Resolve<IModuleEnumerator>();
+            IModuleCatalog moduleEnumerator = _container.Resolve<IModuleCatalog>();
             ModuleLoader moduleLoader = _container.Resolve<ModuleLoader>();
 
             // Retrieve the required module information

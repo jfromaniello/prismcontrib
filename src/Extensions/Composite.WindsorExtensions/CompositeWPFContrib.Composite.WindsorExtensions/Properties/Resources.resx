@@ -123,8 +123,8 @@
   <data name="NullLoggerFacadeException" xml:space="preserve">
     <value>The ILoggerFacade is required and cannot be null.</value>
   </data>
-  <data name="NullModuleEnumeratorException" xml:space="preserve">
-    <value>The IModuleEnumerator is required and cannot be null in order to initialize the modules.</value>
+  <data name="NullModuleCatalogException" xml:space="preserve">
+    <value>The IModuleCatalog is required and cannot be null in order to initialize the modules.</value>
   </data>
   <data name="NullModuleLoaderException" xml:space="preserve">
     <value>The IModuleLoader is required and cannot be null in order to initialize the modules.</value>

@@ -4,7 +4,7 @@ using Microsoft.Practices.Composite.Modularity;
 
 namespace CompositeWPFContrib.Composite.Tests.Mocks
 {
-    public class ModuleEnumeratorMock : IModuleEnumerator
+    public class ModuleEnumeratorMock : IModuleCatalog
     {
         private Collection<ModuleInfo> _modules;
 
@@ -16,7 +16,7 @@ namespace CompositeWPFContrib.Composite.Tests.Mocks
             _modules = modules;
         }
 
-        #region IModuleEnumerator Members
+        #region IModuleCatalog Members
 
         /// <summary>
         /// Gets the module.

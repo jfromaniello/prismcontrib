@@ -39,7 +39,7 @@ namespace CompositeWPFContrib.Composite.Tests.Services
             container.RegisterInstance<IUnityContainer>(container);
             container.AddNewExtension<ModuleTrackingUnityExtension>();
 
-            container.RegisterInstance<IModuleEnumerator>(moduleEnumerator);
+            container.RegisterInstance<IModuleCatalog>(moduleEnumerator);
             container.RegisterInstance<IModuleStatusService>(container.Resolve<ModuleStatusService>());
 
             ReadOnlyCollection<ModuleStatusInfo> modules = container.Resolve<IModuleStatusService>().GetModules();
@@ -66,7 +66,7 @@ namespace CompositeWPFContrib.Composite.Tests.Services
             container.RegisterInstance<IUnityContainer>(container);
             container.AddNewExtension<ModuleTrackingUnityExtension>();
 
-            container.RegisterInstance<IModuleEnumerator>(moduleEnumerator);
+            container.RegisterInstance<IModuleCatalog>(moduleEnumerator);
             container.RegisterInstance<IModuleStatusService>(container.Resolve<ModuleStatusService>());
 
             ModuleMock module = container.Resolve<ModuleMock>();
